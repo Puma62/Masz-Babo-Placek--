@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "name": "Placek klasyczny",
+      "description": "Z kwaśną śmietaną i szczypiorkiem",
+      "price": "22 zł"
+    },
+    {
+      "name": "Placek z gulaszem",
+      "description": "Danie sycące, idealne na zimno",
+      "price": "28 zł"
+    },
+    {
+      "name": "Sałatka sezonowa",
+      "description": "Świeże warzywa z sosem vinaigrette",
+      "price": "18 zł"
+    }
+  ]
+}

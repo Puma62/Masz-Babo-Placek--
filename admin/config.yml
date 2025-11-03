@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "Ustawienia strony"
+    files:
+      - file: "data/menu.json"
+        label: "Menu (JSON)"
+        name: "menu"
+        fields:
+          - label: "items"
+            name: "items"
+            widget: list
+            types:
+              - label: "Danie"
+                name: "dish"
+                widget: object
+                fields:
+                  - {label: "Nazwa", name: "name", widget: string}
+                  - {label: "Opis", name: "description", widget: text}
+                  - {label: "Cena", name: "price", widget: string}
+
+  - name: "hours"
+    label: "Godziny otwarcia"
+    files:
+      - file: "_data/site-hours.yml"
+        label: "Godziny"
+        name: "site_hours"
+        fields:
+          - {label: "Treść godzin (HTML lub tekst)", name: "hours_html", widget: text}
+
+  - name: "gallery"
+    label: "Galeria"
+    files:
+      - file: "_data/gallery.yml"
+        label: "Galeria obrazów"
+        name: "gallery_images"
+        fields:
+          - label: "Obrazy"
+            name: "images"
+            widget: list
+            allow_add: true
+            field: {label: "Obraz (plik)", name: "image", widget: image}

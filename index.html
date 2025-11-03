@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Masz Babo Placek</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sticky navbar -->
+  <header class="nav-wrap">
+    <nav class="nav">
+      <div class="brand">Masz Babo Placek</div>
+      <ul class="nav-links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Galeria</a></li>
+        <li><a href="#hours">Godziny</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- O nas (pierwsze, widoczne) -->
+  <main>
+    <section id="about" class="hero">
+      <div class="hero-content">
+        <h1>Masz Babo Placek</h1>
+        <p class="lead">Witamy w "Masz Babo Placek" — domowym klimacie i najlepszych plackach w mieście. Zapraszamy na pyszne dania i miłą atmosferę.</p>
+        <p class="small">Adres: <span id="addr">Warszawska 12, 41-200 Sosnowiec</span></p>
+        <p class="small">Telefon: <a href="tel:+48 534 476 323" id="phone">+48 534 476 323</a></p>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-placeholder.jpg" alt="Masz Babo Placek" />
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section">
+      <div class="container">
+        <h2>Menu</h2>
+        <div id="menu-grid" class="menu-grid">
+          <!-- wypełnione dynamicznie z data/menu.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2>Galeria</h2>
+        <div class="gallery-grid" id="gallery-grid">
+          <img src="images/gallery-1.jpg" alt=""/>
+          <img src="images/gallery-2.jpg" alt=""/>
+          <img src="images/gallery-3.jpg" alt=""/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Godziny otwarcia -->
+    <section id="hours" class="section">
+      <div class="container">
+        <h2>Godziny otwarcia</h2>
+        <div id="hours-content">
+          <p>Poniedziałek — Piątek: 10:00 — 22:00</p>
+          <p>Sobota — Niedziela: 11:00 — 23:00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt / Mapa -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Kontakt & Rezerwacje</h2>
+          <p>Telefon do rezerwacji stolika: <a href="tel:+48 534 476 323">+48 534 476 323</a></p>
+          <p>Adres: <span id="address-text">Warszawska 12, 41-200 Sosnowiec</span></p>
+          <p>Możliwość rezerwacji tylko telefonicznie.</p>
+        </div>
+        <div>
+          <h3>Gdzie nas znaleźć</h3>
+          <div id="map" class="map"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="currentYear"></span> Masz Babo Placek</p>
+  </footer>
+
+  <!-- Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Google Maps JS: zastąp YOUR_API_KEY własnym kluczem w Netlify env -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initMap"></script>
+</body>
+</html>
